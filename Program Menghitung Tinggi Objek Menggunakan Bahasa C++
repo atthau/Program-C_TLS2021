@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+float distance,subHeight,deg,obHeight;
+
+//Meminta masukkan jarak pengamat dengan objek//
+cout<<"Masukkan jarak anda terhadap objek secara horizontal dalam satuan meter: ";
+cin>>distance;
+
+//Meminta masukkan tinggi pengamat//
+cout<<"Masukkan tinggi anda dalam satuan meter (diukur dari kaki sampai mata): ";
+cin>>subHeight;
+
+//Meminta masukkan sudut//
+cout<<"Masukkan besar sudut (dari pandangan horizontal ke arah objek sampai ke puncak objek): ";
+cin>>deg;
+
+//Mengonversi sudut dari derajat ke radian//
+deg=deg*M_PI/180;
+
+//Menghitung tinggi objek//
+cout<<fixed<<setprecision(2);
+obHeight=subHeight+(distance*tan(deg));
+cout<<"Tinggi dari objek tersebut adalah "<<obHeight<<" meter.";
+
+return 0;
+}
